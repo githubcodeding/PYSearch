@@ -427,5 +427,8 @@ didSelectSearchSuggestionAtIndex:(NSInteger)index
 + (instancetype)searchViewControllerWithHotSearches:(NSArray<NSString *> *)hotSearches
                                searchBarPlaceholder:(NSString *)placeholder
                                      didSearchBlock:(PYDidSearchBlock)block;
-
+/**
+保存历史记录
+*/
+- (void)saveSearchCacheAndRefreshView;
 @end
