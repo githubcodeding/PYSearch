@@ -455,16 +455,16 @@
     UIView *titleView = [[UIView alloc] init];
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:titleView.bounds];
     [titleView addSubview:searchBar];
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0) { // iOS 11
-        [NSLayoutConstraint activateConstraints:@[
-                                                  [searchBar.topAnchor constraintEqualToAnchor:titleView.topAnchor],
-                                                  [searchBar.leftAnchor constraintEqualToAnchor:titleView.leftAnchor],
-                                                  [searchBar.rightAnchor constraintEqualToAnchor:titleView.rightAnchor],
-                                                  [searchBar.bottomAnchor constraintEqualToAnchor:titleView.bottomAnchor]
-                                                  ]];
-    } else {
-        searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    }
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0) { // iOS 11
+//        [NSLayoutConstraint activateConstraints:@[
+//                                                  [searchBar.topAnchor constraintEqualToAnchor:titleView.topAnchor],
+//                                                  [searchBar.leftAnchor constraintEqualToAnchor:titleView.leftAnchor],
+//                                                  [searchBar.rightAnchor constraintEqualToAnchor:titleView.rightAnchor],
+//                                                  [searchBar.bottomAnchor constraintEqualToAnchor:titleView.bottomAnchor]
+//                                                  ]];
+//    } else {
+//        searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    }
     self.navigationItem.titleView = titleView;
     searchBar.placeholder = [NSBundle py_localizedStringForKey:PYSearchSearchPlaceholderText];
     searchBar.backgroundImage = [NSBundle py_imageNamed:@"clearImage"];
